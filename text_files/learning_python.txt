@@ -1,0 +1,5 @@
+In Python you can build a class.
+In Python you can print strings.
+In Python you can do the math.
+In Python you can input words.
+In Python you can draw pictrues.

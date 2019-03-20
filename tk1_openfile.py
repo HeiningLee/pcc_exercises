@@ -1,0 +1,35 @@
+import tkinter
+from tkinter import filedialog
+
+def openfiles2():
+    s2fname = filedialog.askopenfilename(title='打开S2文件',
+                                         filetypes=[('S2out', '*.out'),
+                                                    ('All Files', '*')])
+    print(s2fname)
+def openfilecgns():
+    cgnsfname = filedialog.askopenfilename(title='打开CGNS文件',
+                                           filetypes=[('CGNSdat', '*.dat'),
+                                                      ('All Files', '*')] )
+    print(cgnsfname)
+
+
+root = tkinter.Tk()
+#root.geometry('500x300+500+200')
+btn1 = tkinter.Button(root,
+                      text='打开S2文件',
+                      font=("宋体", 20, 'bold'),
+                      width=10,
+                      height=5,
+                      command=openfiles2)
+btn2 = tkinter.Button(root,
+                      text='打开CGNS文件',
+                      font=('宋体', 20, 'bold'),
+                      width=13,
+                      height=8,
+                      command=openfilecgns)
+txt1 = tkinter.Text(root, cnf={"text"})
+
+txt1.pack(side='top')
+btn1.pack(side='left')
+btn2.pack(side='left')
+root.mainloop()
